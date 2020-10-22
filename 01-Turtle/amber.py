@@ -1,12 +1,24 @@
 import turtle
-colors = ["red","purple","blue","green","orange","yellow"]
-turtle.speed(0)
-my_pen = turtle.Pen()
-turtle.bgcolor("black")
-for x in range(360):
-    my_pen.pencolor(colors[x%6])
-    my_pen.width(x/100+1)
-    my_pen.forward(x)
-    my_pen.left(59)
+
+wn = turtle.Screen()
+wn.bgcolor("light green")
+wn.title("Turtle")
+skk = turtle.Turtle()
+skk.color("blue")
+
+def sqrfunc(size):
+    for i in range(4):
+        skk.fd(size)
+        skk.left(90)
+        size = size+5
+
+sqrfunc(6)
+sqrfunc(26)
+sqrfunc(46)
+sqrfunc(66)
+sqrfunc(86)
+sqrfunc(106)
+sqrfunc(126)
+sqrfunc(146)
 
 turtle.done()
